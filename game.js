@@ -49,7 +49,7 @@ function Bear() {
      makeBees();
  }
 
- funtion moveBear(e){
+ function moveBear(e){
      //cpdes of the four keys
      const KEYUP = 38;
      const KEYDOWN = 40;
