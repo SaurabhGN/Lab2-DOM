@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,18 +15,18 @@
     <script>
         var bear;
         var bees;
-        //take start time
-        lastStringTime = new Date();
+        var dBear;
+        var newStingtype;
     </script>
-
-
     <body onload = "start();">
 
         <div id="title">
             <h1>Help the bear escape the bees !</h1>
-            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3"> bees by running and jumping. The objective is to have as less stings as possible!</p>
+            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3" onchange="makeBees()"> bees by running and jumping. The objective is to have as less stings as possible!</p>
             <p>You can ajust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
                 <br> and the refresh period <input type="text" id="periodTimer" value="10" size="3"> ms </p>
+            <p>You can ajust bear speed. <input type="text" id="speedBear" value="100" size="3" onchange="Bear.setSpeed()"> px/ms
+            <p>You can restart the game by clicking this button <button onclick="restart()">restart</button></p>
             <h2>Press left, right, up, down keys to move the bear</h2>
 
         </div>
@@ -36,7 +37,7 @@
                         <p>Stings: [<span id="hits">0</span>]</p>
                     </td>
                     <td>
-                        <p>Best duration: [<span id="duration">?</span>]</p>
+                        <p>Best duration: [<span id="duration">0</span>]</p>
                     </td>
                 </tr>
             </table>
@@ -46,5 +47,6 @@
             <img src="./images/bear.gif" id="bear" alt="bear">
         </div>
     </body>
+    
 
 </html>
